@@ -36,6 +36,25 @@ class Link{
         return $wordArray;
     }
 
+    function addWord($word)
+    {
+        $wordObject = Word::find($word);
+
+        if($wordObject === null){
+            $wordObject = Word::create([
+                'word' => $word
+            ]);
+        }
+
+        $query = Database::SELECT('SELECT * FROM word_links WHERE link_id ='.$this->id.' AND word_id ='.$wordObject->id);
+        if(sizeof($query) <= 0){
+            Database::INSERT([
+                'link_id' => $this->id,
+                'word_id' => $wordObject->id,
+            ], 'word_links');
+        }
+    }
+
     function delete(){
         Database::DELETE_WHERE('link_id = '.$this->id, 'word_links');
         Database::DELETE($this->id, 'links');
@@ -69,4 +88,14 @@ class Link{
         }
         return $linkArray;
     }
+
+    static function find($link)
+    {
+        $data = Database::FIND('link', $link, 'links');
+        if($data === false){
+            return null;
+        }else{
+            return new Link($data['id'], $data['link'], $data['updated_at']);
+        }
+    }    
 }

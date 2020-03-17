@@ -2,6 +2,8 @@
 
 namespace SearchEngine;
 
+use ORM\Link;
+
 class Crawler{
 
     static public function CRAWL($url)
@@ -14,8 +16,25 @@ class Crawler{
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
         $result = curl_exec($ch);
         curl_close($ch);
+    
+        $wordArray = WebParser::WORDS($result);
+        
+        $linkObject = Link::find($url);
+        if($linkObject === null){
+            $linkObject = Link::create([
+                'link' => $url
+            ]);
+        }
 
-        WebParser::WORDS($result);
-        //print_r(WebParser::URL($result));
+        foreach($wordArray as $word)
+        {
+            $linkObject->addWord($word);
+        }
+
+        return [
+            'words' => $wordArray,
+            'urls' => WebParser::URLS($result),
+            'current_link' => $linkObject 
+        ];
     }
 }

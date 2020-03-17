@@ -32,6 +32,14 @@ class Database{
         return $statement->fetchAll();
     }
 
+    static function FIND($key, $value, $table)
+    {
+        $sqlText = 'SELECT * FROM '.$table.' WHERE '.$key.' = "'.$value.'"';
+        $statement = Database::$PDO->prepare($sqlText);
+        $statement->execute();
+        return $statement->fetch();
+    }    
+
     static function INSERT($data, $tableName)
     {
         $dbCONNECTION = Database::$PDO;

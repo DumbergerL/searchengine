@@ -5,7 +5,7 @@ use Soundasleep\Html2Text;
 
 class WebParser{
 
-    static function URL($html)
+    static function URLS($html)
     {
         $NEW_URLS = [];
 
@@ -29,8 +29,11 @@ class WebParser{
             'drop_links' => true,
         );
         $text = Html2Text::convert($html, $options);
-        $wordArray = preg_split('[a-zA-Z]+\s', $text);
+        $wordArray = [];
+        preg_match_all('/[a-zA-Z]+\s/', $text, $wordArray);
 
-        print_r($wordArray);
+        $wordArray = array_map(function($element){ return strtolower($element); }, $wordArray[0]);
+
+        return $wordArray;
     }
 }
