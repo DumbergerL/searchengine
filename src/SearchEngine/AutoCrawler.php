@@ -4,7 +4,7 @@ namespace SearchEngine;
 
 class AutoCrawler{
 
-    static $CRAWL_LIMIT = 3;
+    static $CRAWL_LIMIT = 4;
 
     static function start($url)
     {
@@ -18,12 +18,14 @@ class AutoCrawler{
             $newUrlArray = [];
             foreach($urlArray as $crawlUrl)
             {
-                echo '<br><li>Crawl... '.$crawlUrl.'</li>';
+                echo '<li>Crawl... '.$crawlUrl.'</li>';
                 $returnObject = Crawler::CRAWL($crawlUrl);
                 $crawledPages++;
+                if($crawledPages >= AutoCrawler::$CRAWL_LIMIT) break;
                 $newUrlArray = array_merge($newUrlArray, $returnObject['urls']);
             }
 
+            if($crawledPages >= AutoCrawler::$CRAWL_LIMIT) break;
             $urlArray = $newUrlArray;
             $i++;
         }

@@ -97,5 +97,20 @@ class Link{
         }else{
             return new Link($data['id'], $data['link'], $data['updated_at']);
         }
-    }    
+    }  
+    
+    static function uniqueArray($linkArray)
+    {
+        $ids = [];
+        $uniqueArray = [];
+
+        foreach($linkArray as $link)
+        {
+            if(!in_array($link->id, $ids)){
+                $uniqueArray[] = $link;
+                $ids[] = $link->id;
+            }   
+        }
+        return $uniqueArray;
+    }
 }
