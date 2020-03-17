@@ -33,6 +33,11 @@ class Word{
         return $linkArray;
     }
 
+    function delete(){
+        Database::DELETE($this->id, 'words');
+    }
+
+    //////////////////STATIC/////////////////////////////
     static function all()
     {
         $data = Database::SELECT('SELECT * FROM words');
@@ -41,5 +46,13 @@ class Word{
             $wordArray[] = new Word($tupel['id'], $tupel['word']);
         }
         return $wordArray;
+    }
+
+    static function create($data)
+    {
+        $id = Database::INSERT($data, 'words');
+        $wordObject = new Word($id);
+        $wordObject->load();
+        return $wordObject;
     }
 }

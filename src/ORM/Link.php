@@ -36,6 +36,11 @@ class Link{
         return $wordArray;
     }
 
+    function delete(){
+        Database::DELETE($this->id, 'links');
+    }
+
+    //////////////////STATIC/////////////////////////////
     static function all()
     {
         $data = Database::SELECT('SELECT * FROM links');
@@ -44,5 +49,13 @@ class Link{
             $linkArray[] = new Link($tupel['id'], $tupel['link'], $tupel['updated_at']);
         }
         return $linkArray;
+    }
+
+    static function create($data)
+    {
+        $id = Database::INSERT($data, 'links');
+        $linkObject = new Link($id);
+        $linkObject->load();
+        return $linkObject;
     }
 }

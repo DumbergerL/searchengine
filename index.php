@@ -9,8 +9,8 @@ require_once './src/autoload.php';
 
 echo "<h1> HELLO WORLD!</h1>";
 
+$word = new Word(6);
+$word->load();
 
-$wordOne = new Word(1);
-$wordOne->load();
+$word->delete();
 
-print_r( $wordOne->links() );
