@@ -24,6 +24,14 @@ class Database{
         return $statement->fetchAll();
     }
 
+    static function SEARCH($key, $value, $table)
+    {
+        $sqlText = 'SELECT * FROM '.$table.' WHERE '.$key.' LIKE "%'.$value.'%"';
+        $statement = Database::$PDO->prepare($sqlText);
+        $statement->execute();
+        return $statement->fetchAll();
+    }
+
     static function INSERT($data, $tableName)
     {
         $dbCONNECTION = Database::$PDO;

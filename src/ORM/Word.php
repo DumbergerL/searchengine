@@ -56,4 +56,14 @@ class Word{
         $wordObject->load();
         return $wordObject;
     }
+
+    static function search($key, $value)
+    {
+        $data = Database::SEARCH($key, $value, 'words');
+        $wordArray = [];
+        foreach($data as $tupel){
+            $wordArray[] = new Word($tupel['id'], $tupel['word']);
+        }
+        return $wordArray;
+    }
 }

@@ -59,4 +59,14 @@ class Link{
         $linkObject->load();
         return $linkObject;
     }
+
+    static function search($key, $value)
+    {
+        $data = Database::SEARCH($key, $value, 'links');
+        $linkArray = [];
+        foreach($data as $tupel){
+            $linkArray[] = new Link($tupel['id'], $tupel['link'], $tupel['updated_at']);
+        }
+        return $linkArray;
+    }
 }
