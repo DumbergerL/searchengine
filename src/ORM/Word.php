@@ -66,4 +66,14 @@ class Word{
         }
         return $wordArray;
     }
+
+    static function find($word)
+    {
+        $data = Database::FIND('word', $word, 'words');
+        if($data === false){
+            return null;
+        }else{
+            return new Word($data['id'], $data['word']);
+        }
+    }
 }
