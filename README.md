@@ -2,6 +2,8 @@
 
 ## Datenbankmodell
 
+Datenbankname: searchengine
+
 **links:**
 * id (integer)
 * link (string)
