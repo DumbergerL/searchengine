@@ -37,6 +37,7 @@ class Link{
     }
 
     function delete(){
+        Database::DELETE_WHERE('link_id = '.$this->id, 'word_links');
         Database::DELETE($this->id, 'links');
     }
 

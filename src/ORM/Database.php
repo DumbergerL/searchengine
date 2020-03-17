@@ -66,6 +66,13 @@ class Database{
         $statement = Database::$PDO->prepare('DELETE FROM '.$tableName.' WHERE id = '.$id);
         $statement->execute();
     }
+    
+    static function DELETE_WHERE($whereClause, $tableName)
+    {
+        $statement = Database::$PDO->prepare('DELETE FROM '.$tableName.' WHERE '.$whereClause);
+        $statement->execute();
+    }
+    
 }
 
 Database::$PDO = new PDO('mysql:host=localhost;dbname='.Database::$DB_NAME, Database::$DB_USER, Database::$DB_PASSWORD);

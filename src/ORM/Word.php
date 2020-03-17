@@ -34,6 +34,7 @@ class Word{
     }
 
     function delete(){
+        Database::DELETE_WHERE('word_id = '.$this->id, 'word_links');
         Database::DELETE($this->id, 'words');
     }
 
