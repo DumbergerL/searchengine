@@ -7,7 +7,10 @@ switch (requestedPage) {
         break;
     case 'main':
         displaySpecificContainer("search_container");
-        break
+        break;
+    case 'result':
+        displaySpecificContainer("results_container");
+        break;
     default:
         displaySpecificContainer("search_container");
 }

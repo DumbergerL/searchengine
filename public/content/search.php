@@ -22,7 +22,7 @@ function getSearchAddSiteContent()
             </form>
         </div>
         <div id='add_site_container' class='input-group mb-3' style='display: none'>
-            <form method='post'>
+            <form action='index.php?page=add' method='post'>
                 <div class='form-group'>
                     <input type='text' class='form-control' placeholder='Site/URL to be added' required>
                 </div>

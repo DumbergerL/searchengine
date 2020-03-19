@@ -2,6 +2,10 @@ html, body {
     height: 100%;
 }
 
+p {
+    margin-bottom: 0;
+}
+
 .full-height {
     height: 80%;
 }
@@ -14,6 +18,16 @@ html, body {
     height: 5%;
 }
 
+p.result_headline {
+    color: blue;
+    font-weight: bold;
+    font-size: large;
+}
+
+p.result_link {
+    color: green;
+}
+
 #content_container {
     position: relative;
     width: 100vw;
@@ -23,5 +37,11 @@ html, body {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
+    width: 90vw;
+}
+
+#results_container {
+    position: absolute;
+    top: 50px; left: 5%;
     width: 90vw;
 }

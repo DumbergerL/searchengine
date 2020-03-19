@@ -11,14 +11,36 @@
  */
 require __DIR__ . '/content/main.php';
 require __DIR__ . '/content/search.php';
+require __DIR__ . '/content/results.php';
+
+require __DIR__ . '/../src/autoload.php';
 
 /**
  * write header
  */
 echo getHeader("QUERII");
 
-switch ($_GET['page']) {
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = 'main';
+}
+
+switch ($page) {
     case 'result':
+        /**
+         * print result
+         */
+        echo getResultsHtml();
+        break;
+    case 'add':
+        /**
+         * add URL if necessary
+         */
+        if (isset($_POST['url'])) {
+            AutoCrawler::start($_POST['url']);
+        }
+        echo getSearchAddSiteContent();
         break;
     default:
         /**
