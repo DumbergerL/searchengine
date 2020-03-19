@@ -92,4 +92,4 @@ class Database{
     
 }
 
-Database::$PDO = new PDO('mysql:host='.Database::$DB_HOST.'localhost'';dbname='.Database::$DB_NAME, Database::$DB_USER, Database::$DB_PASSWORD);
+Database::$PDO = new PDO('mysql:host=' . Database::$DB_HOST . ';dbname='.Database::$DB_NAME, Database::$DB_USER, Database::$DB_PASSWORD);
