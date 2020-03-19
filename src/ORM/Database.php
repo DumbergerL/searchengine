@@ -9,6 +9,7 @@ class Database{
     public static $DB_NAME = 'searchengine';
     public static $DB_USER = 'root';
     public static $DB_PASSWORD = '';
+    public static $DB_HOST = 'localhost';
     
     public static $PDO = null;
 
@@ -91,4 +92,4 @@ class Database{
     
 }
 
-Database::$PDO = new PDO('mysql:host=localhost;dbname='.Database::$DB_NAME, Database::$DB_USER, Database::$DB_PASSWORD);
+Database::$PDO = new PDO('mysql:host='.Database::$DB_HOST.'localhost'';dbname='.Database::$DB_NAME, Database::$DB_USER, Database::$DB_PASSWORD);
