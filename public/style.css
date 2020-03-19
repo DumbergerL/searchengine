@@ -3,11 +3,15 @@ html, body {
 }
 
 .full-height {
-    height: 92%;
+    height: 80%;
 }
 
 .nav-height {
     height: 8%;
+}
+
+.footer-height {
+    height: 5%;
 }
 
 #content_container {
@@ -15,7 +19,7 @@ html, body {
     width: 100vw;
 }
 
-#search_container {
+#search_container, #add_site_container {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%,-50%);
