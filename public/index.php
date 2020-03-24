@@ -39,6 +39,9 @@ switch ($page) {
         /**
          * add URL if necessary
          */
+        if(isset($_POST['limit'])){
+            AutoCrawler::$CRAWL_LIMIT = $_POST['limit'];
+        }
         if (isset($_POST['url'])) {
             AutoCrawler::start($_POST['url']);
         }
