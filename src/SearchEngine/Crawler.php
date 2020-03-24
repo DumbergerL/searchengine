@@ -19,10 +19,20 @@ class Crawler{
     
         $wordArray = WebParser::WORDS($result);
         
+        $previewText = implode(' ', array_slice($wordArray, 0, 50));
+
+        preg_match("/<title>(.*)<\/title>/is", $result, $titleMatches);
+        
+        $title = $titleMatches[0];
+        $title = str_replace('<title>', '', $title);
+        $title = str_replace('</title>', '', $title);
+        
         $linkObject = Link::find($url);
         if($linkObject === null){
             $linkObject = Link::create([
-                'link' => $url
+                'link' => $url,
+                'title' => $title,
+                'preview' => $previewText
             ]);
         }
 
