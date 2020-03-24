@@ -6,6 +6,8 @@
  * Time: 11:26
  */
 
+use SearchEngine\AutoCrawler;
+
 /**
  * require files for text parts
  */
