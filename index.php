@@ -61,7 +61,7 @@ foreach($links as $link)
 
                     foreach($links as $link)
                     {
-                        echo '<li><a href="'.$link->link.'">'.$link->link.'</a></li>';
+                        echo '<li>'.$link->title.'<a href="'.$link->link.'">'.$link->link.'</a>:<br>'.$link->preview.'</li>';
                     }
                 }
             ?>

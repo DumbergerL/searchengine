@@ -6,11 +6,15 @@ class Link{
 
     public $id;
     public $link = "";
+    public $title = "";
+    public $preview = "";
     public $updated_at = "";
 
-    function __construct($id, $link = "", $updated_at=""){
+    function __construct($id, $link = "", $title="", $preview="", $updated_at=""){
         $this->id = $id;
         $this->link = $link;
+        $this->title = $title;
+        $this->preview = $preview;
         $this->updated_at = $updated_at;
     }
 
@@ -19,6 +23,8 @@ class Link{
         $data = Database::SELECT('SELECT * FROM links WHERE id = '.$this->id);
         if(isset($data)){
             $this->link = $data[0]['link'];
+            $this->title = $data[0]['title'];
+            $this->preview = $data[0]['preview'];
             $this->updated_at = $data[0]['updated_at'];
         }else{ 
             throw new \Exception("Retriving was not successful!");
@@ -66,7 +72,7 @@ class Link{
         $data = Database::SELECT('SELECT * FROM links');
         $linkArray = [];
         foreach($data as $tupel){
-            $linkArray[] = new Link($tupel['id'], $tupel['link'], $tupel['updated_at']);
+            $linkArray[] = new Link($tupel['id'], $tupel['link'], $tupel['title'], $tupel['preview'], $tupel['updated_at']);
         }
         return $linkArray;
     }
@@ -84,7 +90,7 @@ class Link{
         $data = Database::SEARCH($key, $value, 'links');
         $linkArray = [];
         foreach($data as $tupel){
-            $linkArray[] = new Link($tupel['id'], $tupel['link'], $tupel['updated_at']);
+            $linkArray[] = new Link($tupel['id'], $tupel['link'], $tupel['title'], $tupel['preview'], $tupel['updated_at']);
         }
         return $linkArray;
     }
@@ -95,7 +101,7 @@ class Link{
         if($data === false){
             return null;
         }else{
-            return new Link($data['id'], $data['link'], $data['updated_at']);
+            return new Link($data['id'], $data['link'], $data['title'], $data['preview'], $data['updated_at']);
         }
     }  
     
