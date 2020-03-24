@@ -1,21 +1,10 @@
 # Searchenginge 
 
-## Datenbankmodell
+## DB-Modell
+In folder: sql/searchengine.sql
 
-Datenbankname: searchengine
+## PHP-Classes
 
-**links:**
-* id (integer)
-* link (string)
-* updated_at (timestamp)
-
-**words:**
-* id (integer)
-* word (string)
-
-**word_links:**
-* id (integer)
-* link_id (integer)
-* word_id (integer)
+![PHP-Classes](./docs.png)
 
 &copy; Patrick Kratzer, Lukas Dumberger
