@@ -29,12 +29,13 @@ function getResultEntry($entry) {
     return "<div>
             <p class='result_headline'><a href='" . $entry->link . "'>" . $entry->title . "</a></p>
             <p class='result_link'>" . $entry->link . "</p>
+            <p class='result_preview'>" . $entry->preview . "</p>
             <p class='result_last_update'> Last update: " . $entry->updated_at . "</p>
         </div><br>";
 }
 
 function getResultCountLine($count) {
-    return $count . " Treffer";
+    return $count . " match";
 }
 
 function getResultsHtml($query = null) {

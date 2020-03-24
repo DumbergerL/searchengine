@@ -2,18 +2,21 @@
   {
     "id": 1,
     "title": "Testtitel 1",
+    "preview": "Dies ist ein Test",
     "link": "Testlink 1",
     "updated_at": "2019-01-01 00:01:02"
   },
   {
     "id": 2,
     "title": "Testtitel 1",
+    "preview": "Dies ist ein Test",
     "link": "Testlink 1",
     "updated_at": "2019-01-01 00:01:02"
   },
   {
     "id": 3,
     "title": "Testtitel 1",
+    "preview": "Dies ist ein Test",
     "link": "Testlink 1",
     "updated_at": "2019-01-01 00:01:02"
   }
