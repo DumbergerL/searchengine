@@ -21,6 +21,11 @@ class FrontendTestResult
     /**
      * @var string
      */
+    public $preview;
+
+    /**
+     * @var string
+     */
     public $link = "";
 
     /**
@@ -40,6 +45,7 @@ class FrontendTestResult
             $result = new self();
             $result->id = $entry->id;
             $result->title = $entry->title;
+            $result->preview = $entry->preview;
             $result->link = $entry->link;
             $result->updated_at = $entry->updated_at;
 

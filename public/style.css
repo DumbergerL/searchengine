@@ -24,6 +24,10 @@ p.result_headline {
     font-size: large;
 }
 
+p.result_preview {
+    color: gray;
+}
+
 p.result_link {
     color: green;
 }
