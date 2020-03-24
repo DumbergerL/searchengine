@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 17. Mrz 2020 um 11:00
+-- Erstellungszeit: 24. Mrz 2020 um 12:07
 -- Server-Version: 10.4.11-MariaDB
 -- PHP-Version: 7.2.26
 
@@ -31,16 +31,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `links` (
   `id` int(11) NOT NULL,
   `link` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `preview` text NOT NULL,
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Daten für Tabelle `links`
---
-
-INSERT INTO `links` (`id`, `link`, `updated_at`) VALUES
-(1, 'http://www.dhbw-heidenheim.de', '2020-03-17 09:59:36'),
-(2, 'http://www.facebook.com', '2020-03-17 09:59:50');
 
 -- --------------------------------------------------------
 
@@ -53,15 +47,6 @@ CREATE TABLE `words` (
   `word` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Daten für Tabelle `words`
---
-
-INSERT INTO `words` (`id`, `word`) VALUES
-(1, 'DHBW'),
-(3, 'Netzwerk'),
-(2, 'Student');
-
 -- --------------------------------------------------------
 
 --
@@ -73,16 +58,6 @@ CREATE TABLE `word_links` (
   `link_id` int(11) NOT NULL,
   `word_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Daten für Tabelle `word_links`
---
-
-INSERT INTO `word_links` (`id`, `link_id`, `word_id`) VALUES
-(1, 1, 1),
-(2, 1, 2),
-(3, 2, 3),
-(4, 2, 1);
 
 --
 -- Indizes der exportierten Tabellen
@@ -115,19 +90,19 @@ ALTER TABLE `word_links`
 -- AUTO_INCREMENT für Tabelle `links`
 --
 ALTER TABLE `links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT für Tabelle `words`
 --
 ALTER TABLE `words`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT für Tabelle `word_links`
 --
 ALTER TABLE `word_links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
