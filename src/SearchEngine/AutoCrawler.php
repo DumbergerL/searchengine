@@ -18,7 +18,7 @@ class AutoCrawler{
             $newUrlArray = [];
             foreach($urlArray as $crawlUrl)
             {
-                echo '<li>Crawl... '.$crawlUrl.'</li>';
+                //echo '<li>Crawl... '.$crawlUrl.'</li>';
                 $returnObject = Crawler::CRAWL($crawlUrl);
                 $crawledPages++;
                 if($crawledPages >= AutoCrawler::$CRAWL_LIMIT) break;
