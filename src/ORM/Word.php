@@ -18,7 +18,7 @@ class Word{
         if(isset($data)){
             $this->word = $data[0]['word'];
         }else{ 
-            throw "Retriving was not successful!";
+            throw new \Exception("Retriving was not successful!");
         }
     }
 

@@ -43,7 +43,7 @@ function getResultsHtml($query = null) {
     } elseif (!is_null($query)) {
         $results = \SearchEngine\Search::query($query);
     } else {
-        throw new Exception('No query provided!');
+        throw new \Exception('No query provided!');
     }
 
     $htmlCode = getPreResultsHtml();

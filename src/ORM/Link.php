@@ -21,7 +21,7 @@ class Link{
             $this->link = $data[0]['link'];
             $this->updated_at = $data[0]['updated_at'];
         }else{ 
-            throw "Retriving was not successful!";
+            throw new \Exception("Retriving was not successful!");
         }
     }
 
