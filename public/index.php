@@ -31,7 +31,7 @@ switch ($page) {
         /**
          * print result
          */
-        echo getResultsHtml();
+        echo getResultsHtml($_GET['query']);
         break;
     case 'add':
         /**

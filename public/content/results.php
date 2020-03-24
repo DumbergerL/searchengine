@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../classes/FrontendTestResult.php';
 
-const USE_TEST_ENTRIES = true;
+const USE_TEST_ENTRIES = false;
 
 function getPreResultsHtml() {
     return "<div id='content_container' class='full-height'>
@@ -41,7 +41,7 @@ function getResultsHtml($query = null) {
     if (USE_TEST_ENTRIES) {
         $results = FrontendTestResult::getAll();
     } elseif (!is_null($query)) {
-        $results = Search::query($query);
+        $results = \SearchEngine\Search::query($query);
     } else {
         throw new Exception('No query provided!');
     }
