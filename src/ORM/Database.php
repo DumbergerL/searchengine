@@ -71,7 +71,7 @@ class Database{
         }else{
             $numberOfEditedValues = $statement->execute($data);  
             if($numberOfEditedValues == 0){
-                throw new \Exception("Unsuccessful Statement!");
+                throw new \Exception("Could not add database entry!");
             }
         }
 
