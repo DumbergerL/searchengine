@@ -67,11 +67,11 @@ class Database{
         $statement = $dbCONNECTION->prepare($stringStatement);
 
         if(!$statement){
-            throw new \Exception("Statement was unsuccessful!");
+            throw new \Exception("Statement was unsuccessful! With query: ".$stringStatement);
         }else{
             $numberOfEditedValues = $statement->execute($data);  
             if($numberOfEditedValues == 0){
-                throw new \Exception("Could not add database entry!");
+                throw new \Exception("Could not add database entry! With query: ".$stringStatement);
             }
         }
 
