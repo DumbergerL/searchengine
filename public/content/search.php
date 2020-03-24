@@ -23,12 +23,17 @@ function getSearchAddSiteContent()
         </div>
         <div id='add_site_container' class='input-group mb-3' style='display: none'>
             <form action='index.php?page=add' method='post'>
-                <div class='form-group'>
-                    <div class='form-inline'>
-                        <input type='text' name='url' class='form-control' placeholder='Site/URL to be added' value='".( isset($_POST['url']) ? $_POST['url'] : '')."'required>
-                        <input type='number' name='limit' class='form-control' placeholder='Crawl-Limit'>
+                <div class='row'>
+                    <div class='col-md-10'>
+                        <label for='inputUrl'>Site/URL to be added</label>
+                        <input type='text' name='url' class='form-control' placeholder='Plaese paste the URL here' value='".( isset($_POST['url']) ? $_POST['url'] : '')."' required>
+                    </div>
+                    <div class='col-md-2'>
+                        <label for='inputCrawlLimit'>Crawl-Limit:</label>
+                        <input type='number' name='limit' class='form-control' placeholder='Crawl-Limit' value='4' id='inputCrawlLimit'>
                     </div>
                 </div>
+                <br>
                 <button class='btn btn-success' type='submit' style='vertical-align: middle'><i class='fa fa-search'></i>Add URL</button>
             </form>
         </div>
