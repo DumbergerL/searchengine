@@ -12,7 +12,7 @@ function getPreResultsHtml() {
 function getPreResultsSearchBarHtml($query = null) {
     return "<form method='get'>
             <div class='form-group'>
-                <input type='text' class='form-control' placeholder='Search term' name='query' required>
+                <input type='text' class='form-control' placeholder='Search term' name='query' value=".( isset($_GET['query']) ? $_GET['query'] : '')." required>
                 <input type='hidden' name='page' value='result'>
             </div>
             <button class='btn btn-success' type='submit'><i class='fa fa-search'></i> Run search</button>
