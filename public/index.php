@@ -14,7 +14,7 @@ use SearchEngine\AutoCrawler;
 require __DIR__ . '/content/main.php';
 require __DIR__ . '/content/search.php';
 require __DIR__ . '/content/results.php';
-
+require __DIR__ . '/content/docs.php';
 require __DIR__ . '/../src/autoload.php';
 
 /**
@@ -47,6 +47,9 @@ switch ($page) {
         }
         echo getSearchAddSiteContent();
         break;
+    case 'docs':
+        echo getDocs();
+    break;
     default:
         /**
          * write search and add site content

@@ -5,6 +5,6 @@ In folder: sql/searchengine.sql
 
 ## PHP-Classes
 
-![PHP-Classes](./docs.png)
+![PHP-Classes](./public/docs.png)
 
 &copy; Patrick Kratzer, Lukas Dumberger
