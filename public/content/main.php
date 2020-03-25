@@ -49,7 +49,7 @@ function getFooter()
     return "<!-- Footer -->
             <footer class='page-footer font-small blue pt-4 footer-height'>
                 <!-- Copyright -->
-                <div class='footer-copyright text-center py-3'>© 2020 Copyright: Lukas Dumberger & Patrick Kratzer</div>
+                <div class='footer-copyright text-center py-3'>© 2020 Copyright: Lukas Dumberger & Patrick Kratzer<br><a href='./?page=docs'>About QUERII</a></div>
             </footer>
 
             <script src='functions.js'></script>
