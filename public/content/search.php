@@ -13,13 +13,20 @@ function getSearchAddSiteContent()
 {
     return "<div id='content_container' class='full-height'>
         <div id='search_container' class='input-group mb-3'>
-            <form method='get'>
-                <div class='form-group'>
-                    <input type='text' class='form-control' placeholder='Search term' name='query' value=".( isset($_GET['query']) ? $_GET['query'] : '')." required>
-                    <input type='hidden' name='page' value='result'>
-                </div>
-                <button class='btn btn-success' type='submit'><i class='fa fa-search'></i> Run search</button>
-            </form>
+            <div style='display: flex; flex-direction: column; align-items: center;'>
+                <div><img src='./logo.png' style='width: 250px; margin-bottom: 20px;'></div>
+                <form method='get' style='width: 100%'>
+                    <div class='form-row align-items-center' style='justify-content: center;'>
+                        <div class='col-sm-8 my-1'>
+                            <input type='text' class='form-control' placeholder='Search term' name='query' required>
+                            <input type='hidden' name='page' value='result'>
+                        </div>
+                        <div class='col-auto my-1'>
+                            <button class='btn btn-success' type='submit'><i class='fa fa-search'></i> Run search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
         <div id='add_site_container' class='input-group mb-3' style='display: none'>
             <form action='index.php?page=add' method='post'>
