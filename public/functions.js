@@ -9,6 +9,7 @@ switch (requestedPage) {
         displaySpecificContainer("search_container");
         break;
     case 'result':
+        document.getElementById("footer").style.position = 'static';
         displaySpecificContainer("results_container");
         break;
     case 'docs':
