@@ -3,9 +3,11 @@ var requestedPage = findGetParameter("page");
 
 switch (requestedPage) {
     case 'add':
+        document.getElementById("footer").style.position = 'block';
         displaySpecificContainer("add_site_container");
         break;
     case 'main':
+        document.getElementById("footer").style.position = 'block';
         displaySpecificContainer("search_container");
         break;
     case 'result':
@@ -16,6 +18,7 @@ switch (requestedPage) {
         document.getElementById("footer").style.position = 'static';
         break;
     default:
+        document.getElementById("footer").style.position = 'block';
         displaySpecificContainer("search_container");
 }
 
