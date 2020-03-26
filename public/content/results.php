@@ -35,7 +35,10 @@ function getResultEntry($entry) {
 }
 
 function getResultCountLine($count) {
-    return $count . " match";
+    if ($count === 1) {
+        return $count . " match";
+    }
+    return $count . " matches";
 }
 
 function getResultsHtml($query = null) {
