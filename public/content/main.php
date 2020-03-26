@@ -29,14 +29,17 @@ function getHeader($title)
                 <title>" . $title . "</title>
             </head>
             <body>
-                <nav class='navbar navbar-dark bg-dark nav-height'>
-                    <a class='navbar-brand' href='?page=main'>QUERII</a>
-                    <ul class='navbar-nav'>
-                        <li class='nav-item active'>
-                            <a class='nav-link' href='?page=add'>Add site</a>
-                        </li>
-                    </ul>
-                </nav>";
+                <header>
+                    <nav class='navbar navbar-dark bg-dark nav-height'>
+                        <a class='navbar-brand' href='?page=main'>QUERII</a>
+                        <ul class='navbar-nav'>
+                            <li class='nav-item active'>
+                                <a class='nav-link' href='?page=add'>Add site</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <main role='main'>";
 }
 
 /**
@@ -46,14 +49,13 @@ function getHeader($title)
  */
 function getFooter()
 {
-    return "<!-- Footer -->
-            <footer class='page-footer font-small blue pt-4 footer-height'>
+    return "</main>
+            <!-- Footer -->
+            <footer class='page-footer font-small blue' id='footer'>
                 <!-- Copyright -->
                 <div class='footer-copyright text-center py-3'>© 2020 Copyright: Lukas Dumberger & Patrick Kratzer<br><a href='./?page=docs'>About QUERII</a></div>
             </footer>
-
             <script src='functions.js'></script>
-
         </body>
     </html>";
 }

@@ -29,20 +29,23 @@ function getSearchAddSiteContent()
             </div>
         </div>
         <div id='add_site_container' class='input-group mb-3' style='display: none'>
-            <form action='index.php?page=add' method='post'>
-                <div class='row'>
-                    <div class='col-md-10'>
-                        <label for='inputUrl'>Site/URL to be added</label>
-                        <input type='text' name='url' class='form-control' placeholder='Plaese paste the URL here' value='".( isset($_POST['url']) ? $_POST['url'] : '')."' required>
+            <div style='display: flex; flex-direction: column; align-items: center;'>
+                <div><img src='./logo.png' style='width: 250px; margin-bottom: 20px;'></div>
+                <form action='index.php?page=add' method='post'>
+                    <div class='row'>
+                        <div class='col-md-8'>
+                            <label for='inputUrl'>Site/URL to be added</label>
+                            <input type='text' name='url' class='form-control' placeholder='Plaese paste the URL here' value='".( isset($_POST['url']) ? $_POST['url'] : '')."' required>
+                        </div>
+                        <div class='col-md-4'>
+                            <label for='inputCrawlLimit'>Crawl-Limit:</label>
+                            <input type='number' name='limit' class='form-control' placeholder='Crawl-Limit' value='4' id='inputCrawlLimit'>
+                        </div>
                     </div>
-                    <div class='col-md-2'>
-                        <label for='inputCrawlLimit'>Crawl-Limit:</label>
-                        <input type='number' name='limit' class='form-control' placeholder='Crawl-Limit' value='4' id='inputCrawlLimit'>
-                    </div>
-                </div>
-                <br>
-                <button class='btn btn-success' type='submit' style='vertical-align: middle'><i class='fa fa-search'></i>Add URL</button>
-            </form>
+                    <br>
+                    <button class='btn btn-success' type='submit' style='vertical-align: middle'><i class='fa fa-search'></i>Add URL</button>
+                </form>
+            </div>
         </div>
     </div>";
 }

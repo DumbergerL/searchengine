@@ -11,6 +11,9 @@ switch (requestedPage) {
     case 'result':
         displaySpecificContainer("results_container");
         break;
+    case 'docs':
+        document.getElementById("footer").style.position = 'static';
+        break;
     default:
         displaySpecificContainer("search_container");
 }

@@ -2,6 +2,17 @@ html, body {
     height: 100%;
 }
 
+body {
+    overflow: auto;
+}
+
+#content {
+    max-height: calc(100% - 120px);
+    overflow-y: scroll;
+    padding: 0px 10%;
+    margin-top: 60px;
+}
+
 p {
     margin-bottom: 0;
 }
@@ -35,17 +46,23 @@ p.result_link {
 #content_container {
     position: relative;
     width: 100vw;
+    align-items: center;
 }
 
 #search_container, #add_site_container {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    width: 90vw;
+
 }
 
 #results_container {
     position: absolute;
     top: 50px; left: 5%;
     width: 90vw;
+}
+
+footer {
+    background-color: lightgray;
+    bottom: 0px;
+    left: 0;
+    position: fixed;
+    right: 0;
 }
