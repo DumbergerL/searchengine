@@ -23,7 +23,7 @@ function getDocs()
         </p>
         <p>
             To keep your links and results up to date, you can add the 'cron-job.sh' script to your cronjob-manager, and execute the script monthly.
-        <´/p>
+        </p>
         <p>
             Source-code on <a href='https://github.com/DumbergerL/searchengine'>https://github.com/DumbergerL/searchengine</a>.
         </p>
