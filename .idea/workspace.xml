@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f541049a-ec08-4801-84ea-ac4bc37e7ac0" name="Default" comment="Add search form">
-      <change beforePath="$PROJECT_DIR$/public/content/results.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/content/results.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +44,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -63,7 +65,8 @@
       <workItem from="1584613328199" duration="2626000" />
       <workItem from="1585045558199" duration="4645000" />
       <workItem from="1585135606516" duration="4717000" />
-      <workItem from="1585210803491" duration="867000" />
+      <workItem from="1585210803491" duration="3691000" />
+      <workItem from="1585321954078" duration="2243000" />
     </task>
     <servers />
   </component>
@@ -79,6 +82,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="554" y="60" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860/-1920.0.1920.1080@0.0.1600.860" timestamp="1584623956467" />
+    <state x="579" y="171" key="FileChooserDialogImpl" timestamp="1585221703858">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="579" y="171" key="FileChooserDialogImpl/0.0.1600.860/-1920.0.1920.1080@0.0.1600.860" timestamp="1585221703858" />
     <state x="582" y="244" key="NewPhpClassDialog" timestamp="1584620999661">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -87,9 +94,17 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="634" y="353" key="NewPhpFileDialog/0.0.1600.860/-1920.0.1920.1080@0.0.1600.860" timestamp="1584620907527" />
+    <state x="301" y="72" key="SettingsEditor" timestamp="1585227772499">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="72" key="SettingsEditor/0.0.1600.860/-1920.0.1920.1080@0.0.1600.860" timestamp="1585227772499" />
     <state x="496" y="253" key="com.intellij.ide.util.TipDialog" timestamp="1585210828808">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="496" y="253" key="com.intellij.ide.util.TipDialog/0.0.1600.860/-1920.0.1920.1080@0.0.1600.860" timestamp="1585210828808" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1585212404127">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860/-1920.0.1920.1080@0.0.1600.860" timestamp="1585212404127" />
   </component>
 </project>
