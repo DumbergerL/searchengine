@@ -22,6 +22,9 @@ function getDocs()
             <b>What can i use it for?</b> If you host your personal website and want to embed a search function, simply install QUERII on your webspace and add your page to the index. The Crawler will automaticaly read every single page and enable you a scalable search engine without any costs!
         </p>
         <p>
+            To keep your links and results up to date, you can add the 'cron-job.sh' script to your cronjob-manager, and execute the script monthly.
+        <´/p>
+        <p>
             Source-code on <a href='https://github.com/DumbergerL/searchengine'>https://github.com/DumbergerL/searchengine</a>.
         </p>
         <h3>2. Database stucture</h3>
