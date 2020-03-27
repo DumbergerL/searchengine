@@ -17,11 +17,6 @@ require __DIR__ . '/content/results.php';
 require __DIR__ . '/content/docs.php';
 require __DIR__ . '/../src/autoload.php';
 
-/**
- * write header
- */
-echo getHeader("QUERII");
-
 if (isset($_GET['page'])) {
     $page = $_GET['page'];
 } else {
@@ -31,11 +26,21 @@ if (isset($_GET['page'])) {
 switch ($page) {
     case 'result':
         /**
+         * write header
+         */
+        echo getHeader("QUERII");
+
+        /**
          * print result
          */
         echo getResultsHtml($_GET['query']);
         break;
     case 'add':
+        /**
+         * write header
+         */
+        echo getHeader("QUERII", true);
+
         /**
          * add URL if necessary
          */
@@ -48,9 +53,19 @@ switch ($page) {
         echo getSearchAddSiteContent();
         break;
     case 'docs':
+        /**
+         * write header
+         */
+        echo getHeader("QUERII");
+
         echo getDocs();
-    break;
+        break;
     default:
+        /**
+         * write header
+         */
+        echo getHeader("QUERII", true);
+
         /**
          * write search and add site content
          */

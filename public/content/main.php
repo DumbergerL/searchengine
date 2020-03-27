@@ -6,9 +6,9 @@
  * @param $title
  * @return string
  */
-function getHeader($title)
+function getHeader($title, $addBackgroud = false)
 {
-    return "<!DOCTYPE html>
+    $header = "<!DOCTYPE html>
         <html lang='de'>
             <head>
                 <!-- Latest compiled and minified CSS -->
@@ -27,9 +27,14 @@ function getHeader($title)
 
                 <meta charset='UTF-8'>
                 <title>" . $title . "</title>
-            </head>
-            <body>
-                <header>
+            </head>";
+    if ($addBackgroud) {
+        $header = $header . "<body background='background/" . rand(1, 8) . ".jpg'>";
+    } else {
+        $header = $header . "<body>";
+    }
+
+    $header = $header . "<header>
                     <nav class='navbar navbar-dark bg-dark nav-height'>
                         <a class='navbar-brand' href='?page=main'>QUERII</a>
                         <ul class='navbar-nav'>
@@ -40,6 +45,8 @@ function getHeader($title)
                     </nav>
                 </header>
                 <main role='main'>";
+
+    return $header;
 }
 
 /**

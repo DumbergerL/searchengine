@@ -18,7 +18,7 @@ p {
 }
 
 .full-height {
-    height: 80%;
+    height: 100%;
 }
 
 .nav-height {
@@ -49,11 +49,9 @@ p.result_link {
     align-items: center;
 }
 
-#search_container, #add_site_container {
-
-}
-
 #results_container {
+    padding: 40px;
+    max-width: 800px;
     position: absolute;
     top: 50px; left: 5%;
     width: 90vw;
