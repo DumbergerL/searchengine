@@ -3,7 +3,7 @@
 function getDocs()
 {
     return "<div id='content_container' class='full-height'>
-    <div style='padding: 40px; max-width: 800px;'>
+    <div style='padding: 20px; max-width: 800px;'>
         <style>
             p{
                 padding-bottom: 20px;

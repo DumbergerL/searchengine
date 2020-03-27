@@ -11,7 +11,7 @@
  */
 function getSearchAddSiteContent()
 {
-    return "<div id='content_container' class='full-height'>
+    return "<div id='content_container' class='full-height' style='margin-bottom: 20rem;'>
         <div id='search_container' class='input-group mb-3'>
             <div style='display: flex; flex-direction: column; align-items: center;'>
                 <div><img src='./logo.png' style='width: 250px; margin-bottom: 20px;'></div>
