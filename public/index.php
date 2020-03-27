@@ -39,7 +39,7 @@ switch ($page) {
         /**
          * write header
          */
-        echo getHeader("QUERII", true);
+        echo getHeader("QUERII");
 
         /**
          * add URL if necessary
